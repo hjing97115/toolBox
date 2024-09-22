@@ -1,14 +1,10 @@
-import requests,os
-from utils.readFile import FileRead
-from utils.FindPath import FindPath
+import requests
 from utils.PrintLog import logger
 
-config = os.path.join(FindPath.ReadConfig(), "setting.ini")
+
 class RestClient:
-    def __init__(self,env):
-        if(env not in ['UAT' , 'PRD']):
-            raise Exception('执行环境必须为UAT或者PRD,现在的环境是{}'.format(env))
-        self.api_domain = FileRead.read_ini(config).get(section=env, option='domain')
+    def __init__(self,api_domain):
+        self.api_domain = api_domain
 
     def get(self, path, **kwargs):
         return self.request(self.api_domain, path=path, method="GET", **kwargs)
@@ -50,4 +46,4 @@ class RestClient:
         if headers is not None:
             logger.info("接口请求的headers参数>>>\n{}".format(json.dumps(headers, ensure_ascii=False, indent=2)))
 
-# RestClient("ITG").get("/?sfrom=baidu-top").headers
+# RestClient().get("/?sfrom=baidu-top").headers

@@ -1,0 +1,5 @@
+[2024-09-22 22:19:00,721][PrintLog.py 42][DEBUG]: 我打印debug日志
+[2024-09-22 22:30:51,103][restClient.py 48][INFO]: 接口请求的地址>>>https://haokan.baidu.com/?sfrom=baidu-top
+[2024-09-22 22:30:51,103][restClient.py 49][INFO]: 接口请求的方法>>>GET
+[2024-09-22 22:31:56,750][restClient.py 48][INFO]: 接口请求的地址>>>https://haokan.baidu.com/?sfrom=baidu-top
+[2024-09-22 22:31:56,766][restClient.py 49][INFO]: 接口请求的方法>>>GET
