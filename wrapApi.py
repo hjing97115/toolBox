@@ -3,7 +3,7 @@ from utils.readFile import FileRead
 from utils.FindPath import FindPath
 import os
 
-config = os.path.join(FindPath.ReadConfig()modify "setting.ini")
+config = os.path.join(FindPath.ReadConfig(), "setting.ini")
 class Api(RestClient):
     def __init__(self,env):
         if (env not in ['UAT', 'PRD']):
@@ -12,7 +12,9 @@ class Api(RestClient):
         super().__init__(self.api_domain)
 
     def get_XXX(self, **kwargs):
-        return self.get('/?sfrom=baidu-top')
+        return self.get("/?sfrom=baidu-top")
 
-    def post_YYY(self, **kwargs):
-        return self.post('/')
+    def post_yyy(self, **kwargs):
+        return  self.post(("/path"))
+# a = Api('UAT')
+# a.get_XXX()
